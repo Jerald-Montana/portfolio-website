@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jerald's Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Jerald.</div>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="left">
+                <div class="photo-wrapper">
+                    <img src="images/personal.jpg" alt="Jerald Profile" class="profile-pic" />
+                </div>
+            </div>
+            <div class="right">
+                <div class="intro">
+                    <h1>Hello, I'm Jerald</h1>
+                    <p>
+                        A passionate developer and robotics enthusiast. I build clean, responsive web interfaces
+                        and smart embedded systems. Welcome to my personal corner on the web.
+                    </p>
+                </div>
+                <div class="socials">
+                    <a href="https://www.facebook.com/JeraldMontanaa/" aria-label="Facebook" class="social-icon"
+                        target="_blank" rel="noopener">
+                        <!-- Facebook SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M13 2H16V6H14C12.3431 6 11 7.34315 11 9V12H16L15 17H11V24H7V17H4V12H7V9C7 5.68629 9.68629 3 13 3H16V2Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener">
+                        <!-- Instagram SVG -->
+                        <svg width="24" height="24" viewBox="0 0 169.063 169.063" fill="none" aria-hidden="true">
+                            <path
+                                d="M122.406 0H46.657C20.928 0 0 20.928 0 46.657v75.749c0 25.729 20.928 46.657 46.657 46.657h75.749c25.729 0 46.657-20.928 46.657-46.657V46.657C169.063 20.928 148.135 0 122.406 0zm31.739 122.406c0 17.54-14.199 31.739-31.739 31.739H46.657c-17.54 0-31.739-14.199-31.739-31.739V46.657c0-17.54 14.199-31.739 31.739-31.739h75.749c17.54 0 31.739 14.199 31.739 31.739v75.749z"
+                                fill="currentColor" />
+                            <path
+                                d="M84.531 41.006c-24.034 0-43.525 19.491-43.525 43.525s19.491 43.525 43.525 43.525 43.525-19.491 43.525-43.525-19.491-43.525-43.525-43.525zm0 71.85c-15.089 0-27.325-12.236-27.325-27.325s12.236-27.325 27.325-27.325 27.325 12.236 27.325 27.325-12.236 27.325-27.325 27.325z"
+                                fill="currentColor" />
+                            <circle cx="129.921" cy="39.842" r="9.96" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon" target="_blank" rel="noopener">
+                        <!-- LinkedIn SVG -->
+                        <svg width="24" height="24" viewBox="0 0 448 512" fill="none" aria-hidden="true">
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.66 53.66 0 1 1 53.66-53.66 53.65 53.65 0 0 1-53.66 53.66zm384.44 340h-92.68V302.4c0-34.7-12.44-58.4-43.6-58.4-23.8 0-38 16-44.3 31.4-2.3 5.6-2.8 13.4-2.8 21.3V448h-92.7s1.2-272 0-300.1h92.7v42.5c12.3-19 34.4-46 83.6-46 61 0 106.7 39.8 106.7 125.4V448z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="GitHub" class="social-icon" target="_blank" rel="noopener">
+                        <!-- GitHub SVG -->
+                        <svg width="24" height="24" viewBox="0 0 1024 1024" fill="none" aria-hidden="true">
+                            <path
+                                d="M512 76C271.1 76 76 271.1 76 512c0 190.6 123.7 352.4 295.1 409.8 21.6 4 29.5-9.4 29.5-20.9 0-10.3-.4-44.7-.6-81.1-120.2 26.1-145.6-51.6-145.6-51.6-19.6-49.8-47.9-63-47.9-63-39.2-26.8 3-26.3 3-26.3 43.3 3 66 44.5 66 44.5 38.5 65.9 101 46.9 125.6 35.9 3.9-27.9 15.1-46.9 27.5-57.7-96-10.9-196.8-48-196.8-213.5 0-47.2 16.9-85.7 44.6-116 -4.5-10.9-19.3-54.9 4.2-114.4 0 0 36.4-11.7 119.4 44.3 34.6-9.6 71.7-14.4 108.6-14.6 36.9.2 74 4.9 108.6 14.6 83-56 119.3-44.3 119.3-44.3 23.6 59.5 8.8 103.5 4.3 114.4 27.7 30.3 44.5 68.8 44.5 116 0 165.9-100.9 202.4-197 213.2 15.5 13.3 29.3 39.6 29.3 79.8 0 57.7-.5 104.2-.5 118.4 0 11.6 7.8 25.1 29.6 20.8C824.3 864.4 948 702.6 948 512 948 271.1 752.9 76 512 76z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-inner">
+            <h2>About Me</h2>
+            <p>Hello! I'm Jerald Niño M. Montana, a passionate robotics enthusiast and web developer. I love building
+                smart systems and visually creative interfaces.</p>
+
+            <h3>Skills</h3>
+            <div class="skills">
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Jira</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Test Cases</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Software Development and LifeCycle</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Arduino</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="95%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>UI/UX</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="70%"></div>
+                    </div>
+                </div>
+                <div class="soft-skills">
+                    <h3>Soft Skills</h3>
+                    <div class="soft-skills-boxes">
+                        <div class="soft-skill-box">Teamwork</div>
+                        <div class="soft-skill-box">Communication</div>
+                        <div class="soft-skill-box">Problem Solving</div>
+                        <div class="soft-skill-box">Adaptability</div>
+                        <div class="soft-skill-box">Time Management</div>
+                        <div class="soft-skill-box">Punctuality</div>
+                        <div class="soft-skill-box">Attention to Detail</div>
+                        <div class="soft-skill-box">Self-Driven</div>
+                        <div class="soft-skill-box">Critical Thinking</div>
+                        <div class="soft-skill-box">Team Collaboration</div>
+                        <div class="soft-skill-box">Troubleshooting</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3>Languages</h3>
+            <ul class="languages">
+                <li><img src="https://flagcdn.com/ph.svg" alt="PH" class="flag-icon"> Filipino – Native</li>
+                <li><img src="https://flagcdn.com/us.svg" alt="US" class="flag-icon"> English – Proficient</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <section id="projects" class="section projects-section">
+        <div class="section-inner">
+            <h2>Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="images/personal.jpg" alt="Project 1">
+                </div>
+                <div class="project-details">
+                    <h3>Project One</h3>
+                    <p>A short description of the first project highlighting its features and tech stack.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/your-repo" class="btn" target="_blank">
+                            <i class="fas fa-code"></i> Code
+                        </a>
+                        <a href="https://your-live-site.com" class="btn btn-live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live View
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project reverse">
+                <div class="project-image">
+                    <img src="project2.jpg" alt="Project 2">
+                </div>
+                <div class="project-details">
+                    <h3>Project Two</h3>
+                    <p>A short description of the second project highlighting its features and tech stack.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/your-repo" class="btn" target="_blank">
+                            <i class="fas fa-code"></i> Code
+                        </a>
+                        <a href="https://your-live-site.com" class="btn btn-live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live View
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="projectTemplate/work.png" alt="Project 3">
+                </div>
+                <div class="project-details">
+                    <h3>Project Three</h3>
+                    <p>A short description of the third project highlighting its features and tech stack.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/your-repo" class="btn" target="_blank">
+                            <i class="fas fa-code"></i> Code
+                        </a>
+                        <a href="https://your-live-site.com" class="btn btn-live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live View
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="experience" class="section">
+        <div class="section-inner">
+            <h2>Experience</h2>
+            <p>Content goes here.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-inner">
+            <h2>Contact</h2>
+            <p>Content goes here.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
