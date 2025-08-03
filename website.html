@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,12 +18,23 @@
         <div class="menu-toggle" id="menuToggle">&#9776;</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hobbies">More</a></li>
         </ul>
     </nav>
+
+    <!-- Theme toggle -->
+    <div class="theme-toggle-floating">
+        <label class="theme-switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider">
+                <i class="fas fa-moon icon moon"></i>
+                <i class="fas fa-sun icon sun"></i>
+            </span>
+        </label>
+    </div>
 
     <!-- Sections -->
     <section id="home" class="section">
@@ -36,7 +48,8 @@
                 <div class="intro">
                     <h1>Hello, I'm Jerald</h1>
                     <p>
-                        Computer Engineer | Quality Assurance | Robotics | Software Enthusiast
+                        A passionate developer and robotics enthusiast. I build clean, responsive web interfaces
+                        and smart embedded systems. Welcome to my personal corner on the web.
                     </p>
                 </div>
                 <div class="socials">
@@ -82,7 +95,7 @@
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="skills" class="section">
         <div class="section-inner">
             <h2>About Me</h2>
             <p>Hello! I'm Jerald Niño M. Montana, a passionate robotics enthusiast and web developer. I love building
@@ -235,19 +248,227 @@
 
     <section id="experience" class="section">
         <div class="section-inner">
-            <h2>Experience</h2>
-            <p>Content goes here.</p>
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <img src="images/personal.jpg" alt="Experience 1" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Software Intern</h3>
+                                <p class="experience-year">2023</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Worked with robotics control system using Arduino and Bluetooth communication modules.
+                                Helped develop a web portfolio using HTML/CSS/JS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Frontend Developer</h3>
+                                <p class="experience-year">2024</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
+                                created user-friendly components.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Frontend Developer</h3>
+                                <p class="experience-year">2024</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
+                                created user-friendly components.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Frontend Developer</h3>
+                                <p class="experience-year">2024</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
+                                created user-friendly components.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Frontend Developer</h3>
+                                <p class="experience-year">2024</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
+                                created user-friendly components.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+
+        <div class="section-inner">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <img src="images/personal.jpg" alt="Experience 1" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Software Intern</h3>
+                                <p class="experience-year">2023</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Worked with robotics control system using Arduino and Bluetooth communication modules.
+                                Helped develop a web portfolio using HTML/CSS/JS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Frontend Developer</h3>
+                                <p class="experience-year">2024</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
+                                created user-friendly components.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Frontend Developer</h3>
+                                <p class="experience-year">2024</p>
+                            </div>
+                            <button class="dropdown-btn">▼</button>
+                        </div>
+                        <div class="experience-details hidden">
+                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
+                                created user-friendly components.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more cards as needed -->
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+
+
+
+    <section id="hobbies" class="section">
         <div class="section-inner">
-            <h2>Contact</h2>
-            <p>Content goes here.</p>
+            <h2 class="highlight-title">Life Outside Tech</h2>
+            <p class="section-desc">
+                This section showcases my passions beyond development — the things that keep me inspired and motivated.
+            </p>
+
+            <div class="life-category" id="sports">
+                <div class="divider">
+                    <img src="ball-icon.png" class="animated-icon bounce" alt="Ball">
+                    <h3>Sports</h3>
+                </div>
+                <div class="media-scroll">
+                    <!-- Replace with your images/videos -->
+                    <img src="sports1.jpg" alt="Sports 1">
+                    <img src="sports2.jpg" alt="Sports 2">
+                    <video src="sports-video.mp4" controls></video>
+                    <img src="sports3.jpg" alt="Sports 3">
+                    <!-- Add inside each .life-category above the .media-scroll -->
+                </div>
+                <p class="desc">Basketball, biking, and staying fit fuel my energy for everything else I do.</p>
+            </div>
+
+            <div class="life-category" id="gaming">
+                <div class="divider">
+                    <img src="controller-icon.png" class="animated-icon float" alt="Controller">
+                    <h3>Gaming</h3>
+                </div>
+                <div class="media-scroll">
+                    <img src="game1.jpg" alt="Game 1">
+                    <video src="gaming-highlights.mp4" controls></video>
+                    <img src="game2.jpg" alt="Game 2">
+                    <img src="game3.jpg" alt="Game 3">
+                </div>
+                <p class="desc">I enjoy exploring immersive worlds and competitive gaming as a way to unwind and
+                    challenge my reflexes.</p>
+            </div>
+
+            <div class="life-category" id="travel">
+                <div class="divider">
+                    <img src="plane-icon.png" class="animated-icon fly" alt="Plane">
+                    <h3>Travel</h3>
+                </div>
+                <div class="media-scroll">
+                    <img src="travel1.jpg" alt="Travel 1">
+                    <video src="trip.mp4" controls></video>
+                    <img src="travel2.jpg" alt="Travel 2">
+                    <img src="travel3.jpg" alt="Travel 3">
+                </div>
+                <p class="desc">Traveling helps me discover new perspectives, cultures, and inspirations that fuel my
+                    creativity.</p>
+            </div>
         </div>
     </section>
+
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const details = button.closest('.experience-content').querySelector('.experience-details');
+                details.classList.toggle('show');
+                button.classList.toggle('rotate');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
