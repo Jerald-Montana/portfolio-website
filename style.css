@@ -1227,3 +1227,67 @@ body.dark-mode .input-container:empty:before {
         align-self: center;
     }
 }
+
+#floating-note {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #09681a;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    animation: floatY 3s ease-in-out infinite;
+    transition: background-color 0.3s ease;
+}
+
+#floating-note:hover {
+    background-color: #0e8c2f;
+}
+
+/* Icon inside */
+#floating-note i {
+    font-size: 20px;
+}
+
+/* Tooltip message */
+.note-tooltip {
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show tooltip on hover */
+#floating-note:hover .note-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Floating animation */
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
