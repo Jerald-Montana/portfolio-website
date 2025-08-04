@@ -15,27 +15,38 @@ document.addEventListener('click', (e) => {
 });
 
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        const fills = entry.target.querySelectorAll('.skill-fill');
 
-        if (entry.isIntersecting) {
-            fills.forEach(fill => {
-                fill.style.width = fill.getAttribute('data-percent');
-            });
-        } else {
-            fills.forEach(fill => {
-                fill.style.width = '0%';
-            });
-        }
+
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const fills = entry.target.querySelectorAll('.skill-fill');
+
+            if (entry.isIntersecting) {
+                fills.forEach(fill => {
+                    fill.style.width = fill.getAttribute('data-percent');
+                });
+            } else {
+                fills.forEach(fill => {
+                    fill.style.width = '0%';
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+
+    const skillSection = document.querySelector('#skills');
+    if (skillSection) observer.observe(skillSection);
+} else {
+    // Fallback: Load all skill bars immediately
+    document.querySelectorAll('.skill-fill').forEach(fill => {
+        fill.style.width = fill.getAttribute('data-percent');
     });
-}, { threshold: 0.5 });
-
-// Observe the section containing skills
-const skillSection = document.querySelector('#skills');
-if (skillSection) {
-    observer.observe(skillSection);
 }
+
+
+
+
+
 
 
 
@@ -54,15 +65,42 @@ document.querySelectorAll('.dropdown-toggle').forEach(btn => {
 });
 
 
-function scrollLeft(btn) {
-    const container = btn.closest('.life-category').querySelector('.media-scroll');
-    container.scrollBy({ left: -300, behavior: 'smooth' });
-}
 
-function scrollRight(btn) {
-    const container = btn.closest('.life-category').querySelector('.media-scroll');
-    container.scrollBy({ left: 300, behavior: 'smooth' });
-}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+
+        let slideWidth = carousel.offsetWidth;
+
+        // Set initial styles
+        track.style.transition = 'transform 0.8s ease-in-out';
+        track.style.transform = `translateX(0)`;
+
+        // Recalculate width on resize (for responsiveness)
+        window.addEventListener("resize", () => {
+            slideWidth = carousel.offsetWidth;
+        });
+
+        setInterval(() => {
+            track.style.transition = 'transform 0.8s ease-in-out';
+            track.style.transform = `translateX(-${slideWidth}px)`;
+
+            // After animation finishes, move first item to end & reset position
+            setTimeout(() => {
+                const firstItem = track.querySelector('.carousel-item');
+                track.appendChild(firstItem);
+                track.style.transition = 'none';
+                track.style.transform = 'translateX(0)';
+            }, 800); // Must match CSS transition duration (0.8s)
+        }, 4000);
+    });
+});
+
+
+
+
 
 
 
@@ -94,3 +132,14 @@ document.getElementById("themeSwitch").addEventListener("change", function () {
     document.body.classList.toggle("dark-mode", this.checked);
 });
 
+
+
+
+
+const form = document.querySelector(".feedback-form");
+const editable = document.getElementById("editableInput");
+const hiddenInput = document.getElementById("hiddenMessage");
+
+form.addEventListener("submit", function (e) {
+    hiddenInput.value = editable.innerText.trim();
+});
