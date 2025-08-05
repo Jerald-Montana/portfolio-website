@@ -143,3 +143,50 @@ const hiddenInput = document.getElementById("hiddenMessage");
 form.addEventListener("submit", function (e) {
     hiddenInput.value = editable.innerText.trim();
 });
+
+
+
+
+let currentZoom = 1;
+
+function openResumeModal() {
+    document.getElementById('resumeModal').classList.add('show');
+    currentZoom = 1;
+    updateZoom();
+}
+
+function closeResumeModal() {
+    document.getElementById('resumeModal').classList.remove('show');
+}
+
+function zoomIn() {
+    currentZoom += 0.1;
+    updateZoom();
+}
+
+function zoomOut() {
+    currentZoom = Math.max(0.5, currentZoom - 0.1);
+    updateZoom();
+}
+
+function updateZoom() {
+    const img = document.getElementById('zoomableResume');
+    img.style.transform = `scale(${currentZoom})`;
+
+    if (currentZoom >= 2) {
+        img.classList.remove('cursor-zoom-in');
+        img.classList.add('cursor-zoom-out');
+    } else {
+        img.classList.remove('cursor-zoom-out');
+        img.classList.add('cursor-zoom-in');
+    }
+}
+
+document.getElementById('zoomableResume').addEventListener('click', () => {
+    if (currentZoom < 2) {
+        currentZoom += 0.5;
+    } else {
+        currentZoom = 1;
+    }
+    updateZoom();
+});
