@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo/favicon.ico" type="image/ico">
 </head>
 
 <body>
@@ -18,10 +19,11 @@
         <div class="menu-toggle" id="menuToggle">&#9776;</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#skills">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#hobbies">More</a></li>
+            <li><a href="#resume-section">Resume</a></li>
         </ul>
     </nav>
 
@@ -49,7 +51,7 @@
                     <h1>Hello, I'm Jerald</h1>
                     <p>
                         Computer Engineering | Quality Assurance Tester | Web Design | Software Hobbyist | PC Builder |
-                        Robotics
+                        Robotics | Student-Athlete
                     </p>
                 </div>
                 <div class="socials">
@@ -101,63 +103,72 @@
     <section id="skills" class="section">
         <div class="section-inner">
             <h2>About Me</h2>
-            <p>Hello! I'm Jerald Niño M. Montana, a passionate robotics enthusiast and web developer. I love building
-                smart systems and visually creative interfaces.</p>
+            <p>I’m a passionate software enthusiast with a keen eye for detail and a strong foundation in web
+                development, UI/UX, and quality assurance. I thrive on building intuitive digital solutions and ensuring
+                every interaction works flawlessly. With a mindset grounded in precision, creativity, and continuous
+                improvement, I aim to deliver user-focused experiences that leave a lasting impact.</p>
 
             <h3>Skills</h3>
             <div class="skills" id="skills">
                 <div class="skill">
-                    <span>HTML</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-percent="90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>CSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-percent="85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-percent="75%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Jira</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-percent="90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Test Cases</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-percent="85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Software Development and LifeCycle</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-percent="75%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Arduino</span>
+                    <i class="fab fa-html5 skill-icon" title="HTML"></i>
                     <div class="skill-bar">
                         <div class="skill-fill" data-percent="95%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>UI/UX</span>
+                    <i class="fab fa-css3-alt skill-icon" title="CSS"></i>
                     <div class="skill-bar">
-                        <div class="skill-fill" data-percent="70%"></div>
+                        <div class="skill-fill" data-percent="78%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js skill-icon" title="JavaScript"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="60%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python skill-icon" title="Python"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="58%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-tasks skill-icon" title="Jira"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-vial skill-icon" title="Test Cases"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-project-diagram skill-icon" title="SDLC"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-microchip skill-icon" title="Arduino"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="95%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-pencil-ruler skill-icon" title="UI/UX"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percent="78%"></div>
                     </div>
                 </div>
                 <div class="soft-skills">
                     <h3>Soft Skills</h3>
                     <div class="soft-skills-boxes">
-                        <div class="soft-skill-box">Teamwork</div>
+                        <div class="soft-skill-box">Curiosity & Initiative</div>
+                        <div class="soft-skill-box">Empathy for Users</div>
                         <div class="soft-skill-box">Communication</div>
                         <div class="soft-skill-box">Problem Solving</div>
                         <div class="soft-skill-box">Adaptability</div>
@@ -190,11 +201,13 @@
             <!-- Project 1 -->
             <div class="project">
                 <div class="project-image">
-                    <img src="images/personal.jpg" alt="Project 1">
+                    <img src="projectTemplate/work.jpg" alt="Project 1">
                 </div>
                 <div class="project-details">
-                    <h3>Project One</h3>
-                    <p>A short description of the first project highlighting its features and tech stack.</p>
+                    <h3>SariSari Spot</h3>
+                    <p>Go-to online tindahan for local goods — bringing the charm of the traditional sari-sari
+                        store to your screen. From daily essentials to beloved Pinoy favorites, shop conveniently
+                        anytime, anywhere.</p>
                     <div class="project-buttons">
                         <a href="https://github.com/your-repo" class="btn" target="_blank">
                             <i class="fas fa-code"></i> Code
@@ -209,11 +222,12 @@
             <!-- Project 2 -->
             <div class="project reverse">
                 <div class="project-image">
-                    <img src="project2.jpg" alt="Project 2">
+                    <img src="projectTemplate/work.jpg" alt="Project 2">
                 </div>
                 <div class="project-details">
-                    <h3>Project Two</h3>
-                    <p>A short description of the second project highlighting its features and tech stack.</p>
+                    <h3>TrackKo</h3>
+                    <p>Simple yet powerful expense tracker designed to help you stay on top of your spending, build
+                        smart habits, and take full control of your financial journey — one peso at a time.</p>
                     <div class="project-buttons">
                         <a href="https://github.com/your-repo" class="btn" target="_blank">
                             <i class="fas fa-code"></i> Code
@@ -228,11 +242,13 @@
             <!-- Project 3 -->
             <div class="project">
                 <div class="project-image">
-                    <img src="projectTemplate/work.png" alt="Project 3">
+                    <img src="projectTemplate/work.jpg" alt="Project 3">
                 </div>
                 <div class="project-details">
-                    <h3>Project Three</h3>
-                    <p>A short description of the third project highlighting its features and tech stack.</p>
+                    <h3>TripTayo</h3>
+                    <p>TripTayo connects you with trusted private drivers for safe and convenient trips in and outside
+                        Metro Manila. Whether it’s a city errand or an out-of-town getaway, book your ride with ease and
+                        confidence.</p>
                     <div class="project-buttons">
                         <a href="https://github.com/your-repo" class="btn" target="_blank">
                             <i class="fas fa-code"></i> Code
@@ -254,86 +270,23 @@
             <h2 class="section-title">Experience</h2>
             <div class="experience-grid">
                 <div class="experience-card">
-                    <img src="images/personal.jpg" alt="Experience 1" class="experience-img" />
+                    <img src="images/intern.jpg" alt="Experience 1" class="experience-img" />
                     <div class="experience-content">
                         <div class="experience-header">
                             <div>
-                                <h3>Software Intern</h3>
-                                <p class="experience-year">2023</p>
+                                <h3>Quality Assurance Intern</h3>
+                                <p class="experience-year">Stealth Monitoring, Inc.</p>
+                                <p class="experience-year">Oct 2024 - Dec 2024</p>
                             </div>
                             <button class="dropdown-btn">▼</button>
                         </div>
                         <div class="experience-details hidden">
-                            <p>Worked with robotics control system using Arduino and Bluetooth communication modules.
-                                Helped develop a web portfolio using HTML/CSS/JS.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-card">
-                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Frontend Developer</h3>
-                                <p class="experience-year">2024</p>
-                            </div>
-                            <button class="dropdown-btn">▼</button>
-                        </div>
-                        <div class="experience-details hidden">
-                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
-                                created user-friendly components.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-card">
-                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Frontend Developer</h3>
-                                <p class="experience-year">2024</p>
-                            </div>
-                            <button class="dropdown-btn">▼</button>
-                        </div>
-                        <div class="experience-details hidden">
-                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
-                                created user-friendly components.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-card">
-                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Frontend Developer</h3>
-                                <p class="experience-year">2024</p>
-                            </div>
-                            <button class="dropdown-btn">▼</button>
-                        </div>
-                        <div class="experience-details hidden">
-                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
-                                created user-friendly components.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-card">
-                    <img src="your-image2.jpg" alt="Experience 2" class="experience-img" />
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Frontend Developer</h3>
-                                <p class="experience-year">2024</p>
-                            </div>
-                            <button class="dropdown-btn">▼</button>
-                        </div>
-                        <div class="experience-details hidden">
-                            <p>Designed responsive web interfaces with React.js and TailwindCSS. Integrated APIs and
-                                created user-friendly components.</p>
+                            <p>During my Quality Assurance internship, I conducted thorough monitoring and testing of
+                                the system hub to identify bugs and irregularities during live operations. I created
+                                detailed tickets and documentation for reported issues, ensuring clear communication
+                                with the development team for timely resolution. Additionally, I collaborated closely
+                                with the project management team to support workflow tracking and maintain quality
+                                assurance throughout the entire project lifecycle.</p>
                         </div>
                     </div>
                 </div>
@@ -346,12 +299,13 @@
             <h2 class="section-title">Education</h2>
             <div class="experience-grid">
                 <div class="experience-card">
-                    <img src="images/personal.jpg" alt="Experience 1" class="experience-img" />
+                    <img src="images/school.jpg" alt="Experience 1" class="experience-img" />
                     <div class="experience-content">
                         <div class="experience-header">
                             <div>
-                                <h3>Software Intern</h3>
-                                <p class="experience-year">2023</p>
+                                <h3>Bachelors Degree</h3>
+                                <p class="experience-year">De La Salle Araneta University</p>
+                                <p class="experience-year">Sep 2021 - Sep 2025</p>
                             </div>
                             <button class="dropdown-btn">▼</button>
                         </div>
@@ -519,6 +473,27 @@
         </div>
     </section>
 
+
+    <section id="resume-section" class="resume-section">
+        <h2>My Resume</h2>
+        <div class="resume-buttons">
+            <a href="assets/resume.pdf" download class="btn download-btn">
+                <i class="fas fa-download"></i> Download PDF
+            </a>
+            <button class="btn view-btn" onclick="openResumeModal()">
+                <i class="fas fa-eye"></i> View JPG
+            </button>
+        </div>
+
+        <!-- Fullscreen modal for viewing the JPG -->
+        <div id="resumeModal" class="modal">
+            <span class="close-btn" onclick="closeResumeModal()">&times;</span>
+            <div class="img-wrapper">
+                <img src="assets/resume.jpg" alt="Resume" id="zoomableResume" class="cursor-zoom-in" />
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
@@ -543,7 +518,7 @@
         <i class="fas fa-note-sticky"></i>
         <div class="note-tooltip">This website is actively changing and updating through time.</div>
     </div>
-    
+
     <script src="script.js"></script>
     <script>
         document.querySelectorAll('.dropdown-btn').forEach(button => {
