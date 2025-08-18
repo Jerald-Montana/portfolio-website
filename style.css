@@ -400,9 +400,31 @@ body.dark-mode .section {
 }
 
 .intro p {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.intro p::after {
+    content: "_";
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Social icons */
@@ -535,6 +557,9 @@ body.dark-mode .section {
         padding-left: 30px;
     }
 
+    .intro {
+        padding-left: 0px;
+    }
 }
 
 .skill {
@@ -777,6 +802,187 @@ body.dark-mode .soft-skill-box:hover {
         left: -100%;
     }
 }
+
+/* Container */
+.flip-card {
+    width: 640px;
+    /* Default size on desktop */
+    aspect-ratio: 16/9;
+    /* Maintain 16:9 ratio */
+    perspective: 1000px;
+    /* Enables 3D effect */
+    margin: 40px auto;
+}
+
+/* Inner wrapper */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+/* Flip when active */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back shared styles */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Front Face */
+.flip-card-front {
+    background: linear-gradient(135deg, #75da87, #3e794c);
+    color: #ffffff;
+    text-align: center;
+}
+
+.flip-card-front h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.flip-card-front p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Back Face */
+.flip-card-back {
+    background: #f9f9f9;
+    color: #333333;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.flip-card-back p {
+    margin-top: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Video responsiveness */
+.flip-card-back video {
+    width: 100%;
+    height: auto;
+    max-height: 70%;
+    border-color: #064d13;
+    border-radius: 8px;
+}
+
+body.dark-mode .flip-card-front {
+    background: #111;
+    color: #f5f5f5;
+    border: 1px solid #333;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .flip-card-back {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    border: 1px solid #333;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.flip-card-front button,
+.flip-card-back button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #09681a, #0dbd5c);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover glow & scale */
+.flip-card-front button:hover,
+.flip-card-back button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Add shiny swipe animation */
+.flip-card-front button::before,
+.flip-card-back button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+
+.flip-card-front button:hover::before,
+.flip-card-back button:hover::before {
+    left: 120%;
+}
+
+
+/* ✅ Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .flip-card {
+        width: 90%;
+        /* Shrinks card to fit screen */
+        margin: 20px auto;
+    }
+
+    .flip-card-front h2 {
+        font-size: 1.4rem;
+    }
+
+    .flip-card-front p,
+    .flip-card-back p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flip-card-front h2 {
+        font-size: 1.2rem;
+    }
+
+    .flip-card-front p,
+    .flip-card-back p {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
 
 #projects h2 {
     font-size: 45px;
@@ -1022,6 +1228,116 @@ body.dark-mode .experience-card {
 @media (max-width: 768px) {
     #experience.section {
         padding-bottom: 100px;
+    }
+}
+
+.clickable {
+    color: #09681a;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* Center modal vertically & horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 95%;
+    max-width: 1100px;
+    /* larger modal */
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Flex layout inside modal */
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Image viewer */
+.modal-images {
+    flex: 1.2;
+    /* make left part bigger */
+    position: relative;
+}
+
+.modal-images img {
+    width: 100%;
+    max-height: 600px;
+    /* larger images */
+    object-fit: contain;
+    border-radius: 8px;
+    opacity: 0;
+    /* start hidden for transition */
+    transition: opacity 0.5s ease;
+    /* smooth fade */
+}
+
+.modal-images img.show {
+    opacity: 1;
+    /* fade in */
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Right side text */
+.modal-description {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .modal-body {
+        flex-direction: column;
     }
 }
 
