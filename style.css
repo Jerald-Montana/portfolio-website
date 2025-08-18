@@ -1,4 +1,3 @@
-/* base reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@ body {
     color: #1f1f1f;
 }
 
-/* Toggle switch styling */
 .theme-switch {
     position: absolute;
     top: 17px;
@@ -64,13 +62,11 @@ input:checked+.slider::before {
     transform: translateX(26px);
 }
 
-/* Default Light Mode Text */
 body {
     background: #f9f9f9;
     color: #1f1f1f;
 }
 
-/* Dark mode (text only) */
 body.dark-mode {
     color: #aca3a3;
 }
@@ -101,7 +97,6 @@ body.dark-mode li {
     padding-bottom: 10px;
 }
 
-/* DARK MODE STYLES */
 body.dark-mode {
     background: #121212;
     color: #f0f0f0;
@@ -119,7 +114,6 @@ body.dark-mode .percent-text {
     color: #f0f0f0;
 }
 
-/* Toggle Button */
 .theme-toggle {
     position: fixed;
     top: 20px;
@@ -139,7 +133,6 @@ body.dark-mode .percent-text {
     background: #064d13;
 }
 
-/* Navbar (keep existing from before) */
 .navbar {
     display: flex;
     align-items: center;
@@ -309,9 +302,6 @@ body.dark-mode .percent-text {
     transform: translateX(30px);
 }
 
-
-
-/* Section common */
 .section {
     min-height: 690px;
     padding: 0 10%;
@@ -321,14 +311,12 @@ body.dark-mode .percent-text {
     align-items: center;
     justify-content: flex-start;
     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
-    /* Default (light mode) */
     position: relative;
     background-color: inherit;
     transition: background-color 0.4s ease, border-color 0.4s ease;
     overflow: hidden;
 }
 
-/* 🌙 Dark mode border color override */
 body.dark-mode .section {
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     /* Or choose your own shade */
@@ -351,15 +339,12 @@ body.dark-mode .section {
     padding-bottom: 5px;
 }
 
-/* Override section layout for #home */
 #home.section {
     flex-direction: row;
-    /* go back to row layout for desktop */
     justify-content: center;
     align-items: center;
 }
 
-/* Optional: adjust padding for consistency */
 #home.section .container {
     width: 100%;
     display: flex;
@@ -391,7 +376,6 @@ body.dark-mode .section {
     box-shadow: 0 20px 40px rgba(9, 104, 26, 0.15);
 }
 
-/* Intro text */
 .intro h1 {
     font-size: 45px;
     margin-bottom: 12px;
@@ -427,7 +411,6 @@ body.dark-mode .section {
     }
 }
 
-/* Social icons */
 .socials {
     display: flex;
     gap: 16px;
@@ -454,7 +437,6 @@ body.dark-mode .section {
     height: 20px;
 }
 
-/* Shake once every 6s via long-cycle keyframe */
 @keyframes shakeCycle {
 
     0%,
@@ -488,7 +470,6 @@ body.dark-mode .section {
     animation: shakeCycle 6s ease-in-out infinite;
 }
 
-/* Individual hover colors */
 .social-icon:hover[aria-label="Facebook"] {
     background-color: #1877F2;
     color: white;
@@ -510,7 +491,6 @@ body.dark-mode .section {
     color: white;
 }
 
-/* Floating picture */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -525,7 +505,6 @@ body.dark-mode .section {
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 1000px) {
     #home .container {
         flex-direction: column;
@@ -551,7 +530,6 @@ body.dark-mode .section {
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 1286px) {
     #home .right {
         padding-left: 30px;
@@ -758,7 +736,6 @@ body.dark-mode #skills h3 {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* 🌙 Dark mode style */
 body.dark-mode .soft-skill-box {
     background: #1f1f1f;
     color: #f0f0f0;
@@ -803,18 +780,13 @@ body.dark-mode .soft-skill-box:hover {
     }
 }
 
-/* Container */
 .flip-card {
     width: 640px;
-    /* Default size on desktop */
     aspect-ratio: 16/9;
-    /* Maintain 16:9 ratio */
     perspective: 1000px;
-    /* Enables 3D effect */
     margin: 40px auto;
 }
 
-/* Inner wrapper */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -823,12 +795,10 @@ body.dark-mode .soft-skill-box:hover {
     transform-style: preserve-3d;
 }
 
-/* Flip when active */
 .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Front and Back shared styles */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -846,7 +816,6 @@ body.dark-mode .soft-skill-box:hover {
     overflow: hidden;
 }
 
-/* Front Face */
 .flip-card-front {
     background: linear-gradient(135deg, #75da87, #3e794c);
     color: #ffffff;
@@ -863,7 +832,6 @@ body.dark-mode .soft-skill-box:hover {
     margin-bottom: 20px;
 }
 
-/* Back Face */
 .flip-card-back {
     background: #f9f9f9;
     color: #333333;
@@ -878,7 +846,6 @@ body.dark-mode .soft-skill-box:hover {
     padding: 0 10px;
 }
 
-/* Video responsiveness */
 .flip-card-back video {
     width: 100%;
     height: auto;
@@ -917,14 +884,12 @@ body.dark-mode .flip-card-back {
     overflow: hidden;
 }
 
-/* Hover glow & scale */
 .flip-card-front button:hover,
 .flip-card-back button:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Add shiny swipe animation */
 .flip-card-front button::before,
 .flip-card-back button::before {
     content: "";
@@ -943,12 +908,9 @@ body.dark-mode .flip-card-back {
     left: 120%;
 }
 
-
-/* ✅ Mobile responsive adjustments */
 @media (max-width: 768px) {
     .flip-card {
         width: 90%;
-        /* Shrinks card to fit screen */
         margin: 20px auto;
     }
 
@@ -1173,18 +1135,15 @@ body.dark-mode .experience-card {
     color: #777;
 }
 
-/* Default (light mode) */
 .dropdown-btn {
     background: none;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
     color: #1f1f1f;
-    /* dark text for light mode */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode style */
 .dark-mode .dropdown-btn {
     color: #ffffff;
     /* light text for dark mode */
@@ -1238,8 +1197,6 @@ body.dark-mode .experience-card {
     text-decoration: underline;
 }
 
-
-/* Modal styling */
 .modal {
     display: none;
     position: fixed;
@@ -1249,8 +1206,6 @@ body.dark-mode .experience-card {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-
-    /* Center modal vertically & horizontally */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1261,12 +1216,10 @@ body.dark-mode .experience-card {
     padding: 20px;
     width: 95%;
     max-width: 1100px;
-    /* larger modal */
     border-radius: 10px;
     position: relative;
 }
 
-/* Close button */
 .close {
     position: absolute;
     top: 10px;
@@ -1275,38 +1228,30 @@ body.dark-mode .experience-card {
     cursor: pointer;
 }
 
-/* Flex layout inside modal */
 .modal-body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-/* Image viewer */
 .modal-images {
     flex: 1.2;
-    /* make left part bigger */
     position: relative;
 }
 
 .modal-images img {
     width: 100%;
     max-height: 600px;
-    /* larger images */
     object-fit: contain;
     border-radius: 8px;
     opacity: 0;
-    /* start hidden for transition */
     transition: opacity 0.5s ease;
-    /* smooth fade */
 }
 
 .modal-images img.show {
     opacity: 1;
-    /* fade in */
 }
 
-/* Navigation buttons */
 .prev,
 .next {
     position: absolute;
@@ -1328,20 +1273,17 @@ body.dark-mode .experience-card {
     right: 0;
 }
 
-/* Right side text */
 .modal-description {
     flex: 1;
     min-width: 250px;
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
     .modal-body {
         flex-direction: column;
     }
 }
 
-/* General Layout */
 .life-outside-tech {
     padding: 95px 20px;
     background: #f9f9f9;
@@ -1351,7 +1293,6 @@ body.dark-mode .experience-card {
     transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
-/* 🌙 Dark mode style */
 body.dark-mode .life-outside-tech {
     background: #121212;
     color: #f0f0f0;
@@ -1396,7 +1337,6 @@ body.dark-mode .life-outside-tech {
     align-items: center;
 }
 
-/* Each Slide */
 .carousel-item {
     flex: 0 0 100%;
     max-width: 100%;
@@ -1410,10 +1350,8 @@ body.dark-mode .life-outside-tech {
     text-align: center;
 }
 
-/* Image Styling */
 .carousel-item img {
     max-width: 90%;
-    /* Slightly larger image */
     max-height: 290px;
     object-fit: contain;
     display: block;
@@ -1421,9 +1359,7 @@ body.dark-mode .life-outside-tech {
     border-radius: 12px;
     box-shadow:
         0 10px 20px rgba(0, 0, 0, 0.2),
-        /* main shadow */
         0 15px 40px rgba(0, 0, 0, 0.1);
-    /* deeper glow */
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1435,7 +1371,6 @@ body.dark-mode .life-outside-tech {
         0 25px 60px rgba(0, 0, 0, 0.12);
 }
 
-/* 🌙 Dark Mode using body.dark-mode */
 body.dark-mode .carousel-item img {
     box-shadow:
         0 10px 20px rgba(255, 255, 255, 0.15),
@@ -1448,14 +1383,12 @@ body.dark-mode .carousel-item img:hover {
         0 25px 60px rgba(255, 255, 255, 0.1);
 }
 
-/* Description Text */
 .carousel-item p {
     margin-top: 10px;
     font-size: 1rem;
     color: #333;
 }
 
-/* Bouncing Icons */
 .bouncing-icons {
     position: absolute;
     bottom: 0;
@@ -1485,7 +1418,6 @@ body.dark-mode .carousel-item img:hover {
     animation-delay: 0.9s;
 }
 
-/* Bounce Keyframes */
 @keyframes bounce {
 
     0%,
@@ -1508,7 +1440,6 @@ body.dark-mode .carousel-item img:hover {
     }
 }
 
-/* Responsive Fixes */
 @media (max-width: 768px) {
     .carousel-item {
         width: 100%;
@@ -1607,7 +1538,6 @@ body.dark-mode .carousel-item img:hover {
     background: #075216;
 }
 
-/* Dark mode support */
 body.dark-mode .footer {
     background: #111;
     color: #f0f0f0;
@@ -1708,12 +1638,10 @@ body.dark-mode .input-container:empty:before {
     background-color: #0e8c2f;
 }
 
-/* Icon inside */
 #floating-note i {
     font-size: 20px;
 }
 
-/* Tooltip message */
 .note-tooltip {
     position: absolute;
     bottom: 65px;
@@ -1730,13 +1658,11 @@ body.dark-mode .input-container:empty:before {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Show tooltip on hover */
 #floating-note:hover .note-tooltip {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Floating animation */
 @keyframes floatY {
 
     0%,
@@ -1766,7 +1692,6 @@ body.dark-mode .input-container:empty:before {
     overflow: hidden;
 }
 
-/* 🌙 Dark mode border color override */
 body.dark-mode .resume-section {
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     /* Or choose your own shade */
@@ -1838,12 +1763,10 @@ body.dark-mode .resume-section {
     cursor: pointer;
 }
 
-/* Default magnifying cursor */
 .cursor-zoom-in {
     cursor: zoom-in;
 }
 
-/* Change to minimize cursor */
 .cursor-zoom-out {
     cursor: zoom-out;
 }
