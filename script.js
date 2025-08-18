@@ -17,6 +17,66 @@ document.addEventListener('click', (e) => {
 
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const phrases = [
+        "Computer Engineering",
+        "Quality Assurance Tester",
+        "Web Design",
+        "Software Hobbyist",
+        "PC Builder",
+        "Robotics",
+        "Student-Athlete"
+    ];
+
+    const typewriterElement = document.getElementById("typewriter");
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+        let currentPhrase = phrases[phraseIndex];
+
+        if (!deleting) {
+            // Typing effect
+            typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === currentPhrase.length) {
+                // Wait before deleting
+                deleting = true;
+                setTimeout(typeEffect, 2000); // ⏱️ Pause after finishing a phrase
+                return;
+            }
+        } else {
+            // Deleting effect
+            typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                deleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length; // loop
+
+                setTimeout(typeEffect, 800); // ⏱️ Small pause before typing next phrase
+                return;
+            }
+        }
+
+        // Adjust typing / deleting speed
+        setTimeout(typeEffect, deleting ? 50 : 120);
+    }
+
+    // ⏱️ Small delay before typing the first phrase
+    setTimeout(typeEffect, 1000);
+});
+
+
+
+
+
+
+
+
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -44,6 +104,17 @@ if ('IntersectionObserver' in window) {
 }
 
 
+document.querySelectorAll(".flip-card").forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+    });
+});
+
+
+
+
+
+
 
 
 
@@ -63,6 +134,83 @@ document.querySelectorAll('.dropdown-toggle').forEach(btn => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("thesisModal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.querySelector(".close");
+    const modalImage = document.getElementById("modalImage");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const modalTitle = document.querySelector(".modal-description h3");
+    const modalText = document.querySelector(".modal-description p");
+
+    // Each image has its own title & description
+    let thesisData = [
+        {
+            src: "images/thesis1.jpg",
+            title: "Automated Watering System - 3D Overview",
+            text: "The automated watering system irrigates a 200-meter agricultural area through four independently controlled sections. Soil moisture sensors trigger water delivery only when needed, using relays and pumps for efficient distribution. This automation reduces labor, saves water, and supports consistent, healthy crop growth—ideal for large-scale farming."
+        },
+        {
+            src: "images/thesis2.jpg",
+            title: "Soil Monitoring Section",
+            text: "The soil moisture indicator’s website interface displays real-time readings from field sensors, allowing users to monitor soil conditions remotely. It features clear visual indicators for moisture levels, enabling timely irrigation decisions. This online access improves efficiency, reduces guesswork, and supports better crop management."
+        },
+        {
+            src: "images/thesis3.jpg",
+            title: "Relay and Pump System",
+            text: "The website interface includes relay and manual pump controls that allow users to operate the irrigation system remotely via Wi-Fi. By sending real-time signals to the relays, the system can be manually activated or overridden, ensuring flexibility for special watering needs and quick responses to changing conditions."
+        },
+    ];
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        modalImage.classList.remove("show");
+        setTimeout(() => {
+            modalImage.src = thesisData[index].src;
+            modalTitle.textContent = thesisData[index].title;
+            modalText.textContent = thesisData[index].text;
+            modalImage.classList.add("show");
+        }, 200);
+    }
+
+    // Open modal
+    openModal.addEventListener("click", function () {
+        modal.style.display = "flex";
+        showSlide(currentIndex);
+    });
+
+    // Close modal
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Prev image
+    prevBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + thesisData.length) % thesisData.length;
+        showSlide(currentIndex);
+    });
+
+    // Next image
+    nextBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % thesisData.length;
+        showSlide(currentIndex);
+    });
+});
+
+
+
+
+
 
 
 
