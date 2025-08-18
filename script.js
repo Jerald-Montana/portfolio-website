@@ -20,7 +20,7 @@ document.addEventListener('click', (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const phrases = [
-        "Computer Engineering",
+        "Computer Engineer",
         "Quality Assurance Tester",
         "Web Design",
         "Software Hobbyist",
